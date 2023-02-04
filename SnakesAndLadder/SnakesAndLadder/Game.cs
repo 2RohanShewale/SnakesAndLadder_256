@@ -29,6 +29,10 @@ namespace SnakesAndLadder
             Console.ForegroundColor= ConsoleColor.Green;
             Console.WriteLine("You got ladder");
             Console.ResetColor();
+            if ((roll + position) > 100)
+            {
+                Console.WriteLine("\nYou went over 100. You can't use ladder"); return position;
+            }
             return roll + position;
         }
         public int Snake(int roll, int position)
