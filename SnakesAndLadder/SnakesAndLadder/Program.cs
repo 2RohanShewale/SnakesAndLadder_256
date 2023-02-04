@@ -13,12 +13,12 @@ namespace SnakesAndLadder
             Random rand = new Random();
             while (true)
             {
-                Console.WriteLine($"You are at position : {player_One.position}");
+                Console.WriteLine($"\nYou are at position : {player_One.position}");
                 Console.WriteLine("Press any key to roll"); Console.ReadKey();
-                int roll = rand.Next(0, 7);
-                Console.WriteLine($"You have Rolled {roll}");
-                player_One.position += roll;
-                
+                int roll = rand.Next(1, 7);
+                Console.WriteLine($"\nYou have Rolled {roll}");
+                Game game = new Game();
+                player_One.position = game.AfterRoll(roll, player_One.position);
             }
 
             Console.ReadKey();

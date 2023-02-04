@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SnakesAndLadder
 {
-    public class Player
+    public struct Player
     {
         public int position;
 
